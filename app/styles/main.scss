@@ -1,0 +1,146 @@
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+// endbower
+
+// screen sizes
+$scrn-md: 992px;
+$scrn-sm: 768px;
+$scrn-xs: 568px;
+
+// colors
+$clr-brnd: #7d124e;
+$clr-gry-lghtst: #f4f4f4;
+$clr-gry-lghtr: #eee;
+$clr-gry-lght: #ccc;
+$clr-gry-drk: #444;
+
+// speed
+$fstr: 0.3s;
+$fst: 0.5s;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  color: $clr-gry-drk;
+  line-height: 25px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 120px;
+  color: white;
+  margin: 0px auto 60px;
+  text-align: center;
+}
+
+.bnnr-wrppr {
+  position: relative;
+  min-height: 700px;
+  background: transparent;
+  height: 900px;
+
+  .bnnr {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    @include transform(translate(-50%, -50%));
+    background: url(../images/back.jpg);
+    background-size: cover;
+  }
+
+  .cntnt-wrppr {
+    z-index: 1;
+    text-align: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: url('../images/cloud1-2x.png') no-repeat center;
+      display: block;
+      width: 540px;
+      height: 282px;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background: url('../images/cloud2-2x.png') no-repeat center;
+      display: block;
+      width: 645px;
+      height: 363px;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .cntnt {
+      z-index: 2;
+    }
+  }
+}
+
+.dwnld {
+  max-width: 180px;
+}
+
+.sctn,
+footer {
+  background: white;
+  z-index: 1;
+  padding: 100px 0;
+  min-height: 400px;
+
+  &.gry {
+    background: $clr-gry-lghtst;
+  }
+
+  @media screen and (max-width: $scrn-sm) {
+    padding: 40px 0;
+  }
+}
+
+footer {
+  background: black;
+  color: white;
+}
+
+
+// @include transition(all $fstr ease-in-out);
+// @include transform(translateY(-50%));
+
+
+
